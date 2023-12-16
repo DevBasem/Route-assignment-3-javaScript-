@@ -1,0 +1,382 @@
+/* |=============================================| Google Fonts |=============================================| */
+/* pt-sans-regular - latin */
+@font-face
+{
+  font-display: swap; 
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/pt-sans-v17-latin-regular.woff2') format('woff2');
+}
+/* pt-sans-700 - latin */
+@font-face
+{
+  font-display: swap; 
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/pt-sans-v17-latin-700.woff2') format('woff2');
+}
+/* poppins-100 - latin */
+@font-face
+{
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../fonts/poppins-v20-latin-100.woff2') format('woff2');
+}
+/* poppins-200 - latin */
+@font-face
+{
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/poppins-v20-latin-200.woff2') format('woff2');
+}
+/* poppins-300 - latin */
+@font-face
+{
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/poppins-v20-latin-300.woff2') format('woff2');
+}
+/* poppins-regular - latin */
+@font-face
+{
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2');
+}
+/* poppins-500 - latin */
+@font-face
+{
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/poppins-v20-latin-500.woff2') format('woff2');
+}
+/* poppins-600 - latin */
+@font-face
+{
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/poppins-v20-latin-600.woff2') format('woff2');
+}
+/* poppins-700 - latin */
+@font-face
+{
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/poppins-v20-latin-700.woff2') format('woff2');
+}
+/* poppins-800 - latin */
+@font-face
+{
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/poppins-v20-latin-800.woff2') format('woff2');
+}
+/* poppins-900 - latin */
+@font-face
+{
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/poppins-v20-latin-900.woff2') format('woff2');
+}
+
+.custom-shadow-start
+{
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15), 8px 8px 0 0 rgba(0, 0, 0, 0.15);
+}
+
+.custom-shadow-navbar
+{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.nav-glass
+{
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.modal-glass
+{
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background-color: rgba(46, 49, 53, 0.2);
+}
+
+.custom-btn-style
+{
+  color: rgb(73, 16, 139);
+  border: 0.1rem solid rgb(73, 16, 139);
+}
+
+.custom-btn-style:hover
+{
+  color: rgb(255, 255, 255); 
+  background-color: rgb(73, 16, 139);
+}
+
+.add-button-empty
+{
+  color: rgb(255, 255, 255);
+  background-color: rgb(73, 16, 139);
+  animation: slide-top 1s cubic-bezier(0.445, 0.050, 0.550, 0.950) infinite alternate both;
+}
+
+@keyframes slide-top
+{
+  0%
+  {
+    transform: translateY(0);
+  }
+  100%
+  {
+    transform: translateY(-15px);
+  }
+}
+
+.responsive-thumbnail
+{
+  width: 100%;
+  object-fit: cover;
+}
+
+body
+{
+  background-color: rgba(243, 248, 255, 1);
+
+  background: linear-gradient(-45deg, #FFD1E3, #A367B1, #5D3587, #392467);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	min-height: 100vh;
+}
+
+@keyframes gradient
+{
+	0%
+  {
+		background-position: 0% 50%;
+	}
+	50%
+  {
+		background-position: 100% 50%;
+	}
+	100%
+  {
+		background-position: 0% 50%;
+	}
+}
+/* |=============================================| General |=============================================| */
+:root
+{
+  --main-font: 'PT Sans', sans-serif;
+  --sec-font: 'Poppins', serif;
+  --text-color: #EEEEEE;
+  --accent-color: #00ADB5;
+}
+
+*,
+*::before,
+*::after
+{
+  box-sizing: border-box;
+}
+
+/* ~~~~~~~~~~~~~~~~ Reusable Custom Classes ~~~~~~~~~~~~~~~~ */
+.main-font
+{
+  font-family: var(--main-font);
+}
+
+.sec-font
+{
+  font-family: var(--sec-font);
+}
+
+.text-color
+{
+  color: var(--text-color);
+}
+
+.accent-color
+{
+  color: var(--accent-color);
+}
+
+.box-sizing-default
+{
+  box-sizing: border-box;
+}
+/* |=============================================| NavBar |=============================================| */
+.navbar h1
+{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.form-control:focus
+{
+  box-shadow: rgba(73, 16, 139, 0.16) 0px 1px 4px, rgb(73, 16, 139) 0px 0px 0px 3px;
+}
+
+.search-box input::placeholder
+{
+  font-family: 'Poppins', serif;
+  font-size: 0.9rem;
+  opacity: 80%;
+}
+
+.search-box
+{
+  width: 10rem;
+}
+
+.add-button i
+{
+  font-size: 1.2rem;
+}
+
+.add-button
+{
+  width: 40px; 
+  height: 40px; 
+  float:left; 
+  line-height: 40px;     
+  text-align: center;
+  vertical-align: bottom;
+  border-radius: 50%;
+  transition: all 300ms;
+}
+
+.add-button a
+{
+  color: rgb(73, 16, 139);
+}
+
+.add-button:hover
+{
+  color: rgb(255, 255, 255);
+  background-color: rgb(73, 16, 139);
+}
+/* |=============================================| Modal Design |============================================| */
+.modal-header
+{
+  border-bottom: none;
+}
+
+.modal-footer
+{
+  border-top: none;
+}
+
+.modal-btn-style
+{
+  
+  color: rgb(255, 255, 255); 
+  background-color: rgb(73, 16, 139);
+}
+
+.modal-btn-style:hover
+{
+  color: rgb(255, 255, 255);
+  border: 0.1rem solid rgb(255, 255, 255);
+}
+/* |=============================================| Welcome Section |===========================================| */
+.welcome-msg
+{
+  min-height: 50vh;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.welcome-msg .container
+{
+  min-height: 50vh;
+  display: grid;
+  place-items: center;
+}
+/* |=============================================| Bookmarks Section |=========================================| */
+.card-wrapper
+{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookmark-thumbnail
+{
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+}
+
+.bookmark-thumbnail img
+{
+  width: 100%;
+}
+
+.bookmark-name
+{
+  display: grid;
+}
+
+.bookmark-title
+{
+  display: inline-block;
+  min-width: 120px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.bookmark-title:first-letter
+{
+  text-transform: uppercase;
+}
+
+.card-buttons
+{
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 0.2rem;
+}
+/* |=============================================| Footer |=============================================| */
+.footer-text
+{
+  font-size: 0.85rem;
+}
+/* |=============================================| Media Query |=============================================| */
+@media (min-width: 575px) and (max-width: 767px)
+{
+  .bookmarks .container
+  {
+    max-width: 400px !important;
+  }
+}
+@media (max-width: 575px)
+{
+  .bookmarks .container
+  {
+    max-width: 400px !important;
+  }
+}

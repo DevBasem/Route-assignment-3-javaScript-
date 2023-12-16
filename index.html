@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- |=============================================| Website Title |==========================================| -->
+    <title>linkQube</title> 
+    <!-- |=============================================| Website Favicon |========================================| -->
+    <link rel="icon" type="image/x-icon" href="assets/imgs/favicon/favicon.svg"> 
+    <!-- |=============================================| Bootstrap CSS |==========================================| -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- |=============================================| Font Awesome |===========================================| -->
+    <link rel="stylesheet" href="assets/icons/css/all.min.css">
+    <!-- |=============================================| Main CSS |===============================================| -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="d-flex flex-column ">
+    <!-- |=============================================| linkQube Application |===================================| -->
+
+    <!-- |=============================================| NavBar |=================================================| -->
+    <nav class="navbar nav-glass custom-shadow-navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex" href="#">
+          <div class="logo-icon me-1 "><img class="w-100" src="assets/imgs/logo/logo.svg" alt="linkQube" height="50"></div>
+          <div class="website-title my-auto"><h1 class="main-font fs-3 fw-bold">LinkQube</h1></div>
+        </a>
+        <div class="nav-functions d-flex my-auto">
+          <div class="search-box" id="searchBox">
+            <input class="form-control px-4 border-0 rounded-pill" onkeyup="search(this.value)" type="text" placeholder="Search..">
+          </div>
+          <div class="add-button ms-2 " type="button" id="addBtn" data-bs-toggle="modal" data-bs-target="#bookmarkModal">
+            <a><i class="fa-solid fa-plus"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- |=============================================| Bookmarks Modal |======================================= | -->
+    <div class="modal fade" id="bookmarkModal" tabindex="-1" aria-labelledby="bookmarkModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow  modal-glass">
+          <div class="modal-header text-white">
+            <h1 class="modal-title sec-font fs-5 ms-auto" id="bookmarkModalLabel">Bookmark Your Favorite Sites</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form class="needs-validation" novalidate>
+            <div class="modal-body">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control border-0 shadow" id="siteName" placeholder="Site Name">
+                <label class="sec-font" for="siteName">Site Name</label>
+                <div class="invalid-feedback fw-bold">Please Enter A Valid Name (at least 3 characters)</div>
+              </div>
+              <div class="form-floating">
+                <input type="url" class="form-control border-0 shadow" id="siteUrl" placeholder="Site URL">
+                <label class="sec-font" for="siteUrl">Site URL</label>
+                <div class="invalid-feedback fw-bold">Please Enter A Valid Link</div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn modal-btn-style rounded-pill sec-font fw-medium" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn modal-btn-style rounded-pill sec-font fw-medium" id="saveBtn" data-bs-dismiss="" onclick="submitBookmark(siteName, siteUrl)">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- |=============================================| Welcome Message |======================================= | -->
+    <div class="welcome-msg d-none" id="welcome">
+      <div class="container sec-font text-white text-center"><h2>A Simple Website To Save And Visit Your Favourite Links</h2></div>
+    </div>
+    <!-- |=============================================| Bookmarks |============================================= | -->
+    <section class="bookmarks my-4 pb-4" id="Bookmarks">
+      <div class="container">
+        <div class="row g-4" id="showBookmarks"></div>
+      </div>
+    </section>
+    <!-- |=============================================| Footer |================================================ | -->
+    <section class="footer fixed-bottom py-1 nav-glass " id="Footer">
+      <div class="container h-100 d-flex justify-content-center">
+        <h1 class="footer-text sec-font fw-medium text-center my-auto">Copy Right 2023 © By Basem All Rights Reserved</h1>
+      </div>
+    </section>
+    <!-- |=============================================| Bootstrap JS |========================================== | -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- |=============================================| Main JS |================================================| -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
